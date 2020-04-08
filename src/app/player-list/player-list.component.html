@@ -1,0 +1,32 @@
+<div class="col-md-12" >
+    <!-- <table class="table table-bordered table-condensed table-hover">
+        <thead>
+            <tr class="bg-light">
+                <th>Title</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div *ngFor = "let v of videoes; index as seqId">
+                <tr click="">
+                    <td>{{v.title}}</td><td>{{v.url}}</td>
+                </tr>
+            </div>
+        </tbody>
+    </table> -->
+    <ul id="videoList" class="list-group">
+      <div *ngIf="videoes; else other_content">
+          <div *ngFor = "let item of videoes; index as seqId" >
+              <li value="assets/video/test1.mp4" #listItem class="list-item" (click)="onSelectedItem(item,seqId)">
+                <img src="assets/images/play.png"/>
+                <span class="text-dark">{{item.url}}</span>
+            </li>		
+        </div>
+    </div>
+    <ng-template #other_content>
+       <p>No videos or JSON-Server is not running on port 3000.</p>
+    </ng-template>
+
+
+    </ul>
+</div>

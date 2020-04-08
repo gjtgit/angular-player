@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="progress">
+            <div class="progress-bar" id="videoProgress" #progressbar  role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >  </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <button id="play" #play type="button" class="btn-light" title="Play" (click)="playVideo()">
+            <img src="assets/images/play.png"/>
+        </button>
+        <button id="pause" #pause type="button" class="btn-light" title="Pause" (click)="pauseVideo()">
+            <img src="assets/images/pause.png"/>
+        </button>
+        <button id="volumeUp" type="button" class="btn-light" title="VolumeUp" (click)="volumeUp()">
+            <img src="assets/images/volume-up.png"/>
+        </button>
+        <button id="volumeDown" type="button" class="btn-light" title="VolumeDown" (click)="volumeDown()">
+            <img src="assets/images/volume-down.png"/>
+        </button>
+        <button id="reload" type="button" class="btn-light" title="Reload" (click)="reload()">
+            <img src="assets/images/replay.png"/>
+        </button>
+        <button id="mute" type="button" class="btn-light" title="Mute/Unmute" (click)="muteVolume()">
+            <img #img_mute src="assets/images/unmute.png"/>
+        </button>
+    </div>
+    
+    <div class="col-md-4" align="right">
+        <button id="like" type="button" class="btn-light" title="Like" (click)="like()">
+            <img src="assets/images/like.png"/>
+            <span id="num_like" #num_like class="text-success"></span>
+        </button>
+        <button id="dislike" type="button" class="btn-light" title="Dislike" (click)="dislike()">
+            <img src="assets/images/dislike.png"/>
+            <span id="num_dislike" #num_dislike class="text-danger"></span>
+        </button>
+    </div>
+    <br/>
+</div>

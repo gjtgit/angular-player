@@ -1,0 +1,4 @@
+
+<app-player #player [video]="selectedVideo"></app-player> 
+<app-player-control #playerControl [playerModule]="playerModule" [video]="selectedVideo"></app-player-control>
+<app-player-list (onSelectedVideo)="onSelectedHandler($event)"></app-player-list>

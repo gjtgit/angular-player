@@ -1,0 +1,56 @@
+{
+  "youtube": [
+    {
+      "id": 1,
+      "title": "test1",
+      "url": "http://localhost:4200/assets/video/test1.mp4",
+      "status": "added",
+      "approved": 1,
+      "likes": 22,
+      "unlike": 4,
+      "currentStatus": "playing",
+      "exitplayprogress": 30
+    },
+    {
+      "id": 2,
+      "title": "test2",
+      "url": "http://localhost:4200/assets/video/test2.mp4",
+      "status": "added",
+      "approved": 1,
+      "likes": 0,
+      "unlike": 0,
+      "currentStatus": "paused",
+      "exitplayprogress": 0
+    },
+    {
+      "id": 3,
+      "title": "test3",
+      "url": "http://localhost:4200/assets/video/test3.mp4",
+      "status": "added",
+      "approved": 1,
+      "likes": 10,
+      "unlike": 1,
+      "currentStatus": "paused",
+      "exitplayprogress": 80
+    },
+    {
+      "id": 4,
+      "title": "Understanding Javascript",
+      "url": "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts ",
+      "status": "edited",
+      "approved": 0,
+      "likes": 25,
+      "unlike": 5,
+      "currentStatus": "stopped",
+      "exitplayprogress": 80
+    },
+    {
+      "title": "aaa",
+      "url": "http://aaabbbccc1.com",
+      "approved": 0,
+      "likes": 0,
+      "unlike": 0,
+      "id": 5
+    }
+  ]
+}
