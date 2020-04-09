@@ -11,9 +11,10 @@ import $ from "jquery";
 })
 export class VideoPlayerComponent implements OnInit {
 
-  selectedVideo: Video; //from player-list emitter
+  selectedVideo: Video; //from player-list 
+  //use @ViewChild to get the child component or call child's methods, and the template var name should be set by #xxxx.
   @ViewChild('player',{static:true}) playerModule:any
-  // @ViewChild('playerControl',{static:true}) playerControlModule:any
+  @ViewChild('playerControl',{static:true}) playerControlModule:any
   
   constructor(private videoSrv:VideoSrvService) { }
   
@@ -44,13 +45,17 @@ export class VideoPlayerComponent implements OnInit {
     //videoElement.src= video.url;
     $("#videoItem").prop("src","");
     $("#videoItem").prop("src",this.selectedVideo.url);
-    videoElement.play();
-    // this.playerControlModule.play.nativeElement.setAttribute("disabled","true");
-    // this.playerControlModule.pause.nativeElement.removeAttribute("disabled");
-    // $("#videoItem").play(); //doesn't work
+    videoElement.play(); //get the dom object to play
+    
+    //also can call methods in child component to play
+    // this.playerControlModule.playVideo(); //use this to call methods in playerControlModule
+
+    //disable the play button and enable pause button
     $("#play").prop("disabled","true");
     $("#pause").prop("disabled","");
-    
+    //it can also disable or enable the button by using playerControlModule
+    //this.playerControlModule.play.nativeElement.setAttribute("disabled","true");
+    //this.playerControlModule.pause.nativeElement.removeAttribute("disabled");
   }
 
 }
